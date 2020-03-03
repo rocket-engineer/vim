@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+  email = server@man-behind-moon.com
+  name = Tobias D.
+[alias]
+  ci = commit
+  st = status
+  co = checkout
+  br = branch
+[diff]
+  guitool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  cmd = meld "$LOCAL" "$REMOTE"
