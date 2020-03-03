@@ -1,0 +1,76 @@
+snippet do "do-loop" b
+do ${1:i}=${2:1},${3:100}
+	${4:! code}
+end do
+${5}
+endsnippet
+
+snippet doa "advanced do-loop" b
+do ${1:i}=${2:1},${3:100},${4:1}
+	${5:! code}
+end do
+${6}
+endsnippet
+
+snippet if "if-statement" b
+if( ${1:question} ) ${2:statement}
+${3}
+endsnippet
+
+snippet ifa "advanced if-statement" b
+if( ${1:question} ) then
+	${2:statement}
+end if
+${3}
+endsnippet
+
+snippet ife "if-else-statement" b
+if( ${1:question} ) then
+	${2:statement_1}
+else
+	${3:statement_2}
+end if
+${4}
+endsnippet
+
+snippet sub "new subroutine" b
+subroutine ${1:subroutine_name}
+	!
+	${2:! code}
+	!
+end subroutine $1
+endsnippet
+
+snippet prog "new program" b
+program ${1:program_name}
+	!
+	${2:! code}
+	!
+end program $1
+endsnippet
+
+snippet mod "new module" b
+module ${1:module_name}
+	!
+	contains
+		!
+		${2:! code}
+		!
+end module $1
+endsnippet
+
+snippet wr "write statement (usual)" b
+write(*,*) ${1:output}
+endsnippet
+
+snippet wt "write statement (text)" b
+write(*,*) "${1:text}"
+endsnippet
+
+snippet wta "write statement (formatted text)" b
+write(*,'(${1:format})') ${2:output} 
+endsnippet
+
+snippet mwc "MPI_WIN_CREATE" b
+MPI_WIN_CREATE(${1:rcv_buf},${2:winsize},${3:disp_unit},${4:MPI_INFO_NULL},${5:MPI_COMM_WORLD},${6:window})
+endsnippet

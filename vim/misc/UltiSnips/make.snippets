@@ -1,0 +1,11 @@
+snippet fmc "new FORTRAN Module command"
+$(FC) $(FCFLAGS) -J$(MOD) -I$(MOD) -c ./inc/$1 -o $(OBJ)/
+endsnippet
+
+snippet fsc "new FORTRAN Source command"
+$(FC) $(FCFLAGS) -I$(MOD) -c ./src/$1 -o $(OBJ)/$2
+endsnippet
+
+snippet flc "new FORTRAN Linker commmand"
+$(FC) $(FCFLAGS) -I$(MOD) $(OBJ)/* -o $(BIN)/$(EXE)
+endsnippet
